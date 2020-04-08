@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<VoidedDocuments xmlns="urn:sunat:names:specification:ubl:peru:schema:xsd:VoidedDocuments-1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:sac="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   
+
+    
+   <ext:UBLExtensions>
+      
+        
+      <ext:UBLExtension>
+         
+            
+         <ext:ExtensionContent>
+            
+                
+            <ds:Signature>
+               
+                    
+               <ds:SignedInfo>
+                  
+                        
+                  <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                  
+                        
+                  <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                  
+                        
+                  <ds:Reference URI="">
+                     
+                            
+                     <ds:Transforms>
+                        
+                                
+                        <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                        
+                            
+                     </ds:Transforms>
+                     
+                            
+                     <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                     
+                            
+                     <ds:DigestValue>w4EspREL8X197a4D4ThjMsekmZM=</ds:DigestValue>
+                     
+                        
+                  </ds:Reference>
+                  
+                    
+               </ds:SignedInfo>
+               
+                    
+               <ds:SignatureValue>M5Sc736+e8cZdkzQrlLJkWW6hS5c9bjgTKYM4mHUIttigF+py91GqIwt0X1ITJTA
+Hne5mKll3ugWqIg3Ey1MsOa+tyT1H5YqhH5eVIxBf18TNNHPBMPs6IoXpBL9TyMo
+ehjfMrv3s7o5/Hr+qRpyQGn457nNOyoZDQReflIU31/1QRtN5fQ7FxYSxmEKMdF5
+VuItG/xGmyl5Ebu720J+0nWHrVnX040Cou5zNjuCfEkLl2Hxu+BmePRFPkZDZMgz
+nr/LrBDEaEb9hYrpwKt44CH//3WxfV1CX5bkGhuMjXjCMiLBucXGvQx+9xBjQh8b
+M2HSVqatp1lFMyQXSbP0Ow==</ds:SignatureValue>
+               
+                    
+               <ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>MIIE+DCCA+CgAwIBAgIJAMaE6vkeOw6cMA0GCSqGSIb3DQEBBQUAMIIBDTEbMBkG
+CgmSJomT8ixkARkWC0xMQU1BLlBFIFNBMQswCQYDVQQGEwJQRTENMAsGA1UECAwE
+TElNQTENMAsGA1UEBwwETElNQTEYMBYGA1UECgwPVFUgRU1QUkVTQSBTLkEuMUUw
+QwYDVQQLDDxETkkgOTk5OTk5OSBSVUMgMjA2MDQxODIzMjkgLSBDRVJUSUZJQ0FE
+TyBQQVJBIERFTU9TVFJBQ0nDk04xRDBCBgNVBAMMO05PTUJSRSBSRVBSRVNFTlRB
+TlRFIExFR0FMIC0gQ0VSVElGSUNBRE8gUEFSQSBERU1PU1RSQUNJw5NOMRwwGgYJ
+KoZIhvcNAQkBFg1kZW1vQGxsYW1hLnBlMB4XDTIwMDEyMzAxNDg0MloXDTIyMDEy
+MjAxNDg0MlowggENMRswGQYKCZImiZPyLGQBGRYLTExBTUEuUEUgU0ExCzAJBgNV
+BAYTAlBFMQ0wCwYDVQQIDARMSU1BMQ0wCwYDVQQHDARMSU1BMRgwFgYDVQQKDA9U
+VSBFTVBSRVNBIFMuQS4xRTBDBgNVBAsMPEROSSA5OTk5OTk5IFJVQyAyMDYwNDE4
+MjMyOSAtIENFUlRJRklDQURPIFBBUkEgREVNT1NUUkFDScOTTjFEMEIGA1UEAww7
+Tk9NQlJFIFJFUFJFU0VOVEFOVEUgTEVHQUwgLSBDRVJUSUZJQ0FETyBQQVJBIERF
+TU9TVFJBQ0nDk04xHDAaBgkqhkiG9w0BCQEWDWRlbW9AbGxhbWEucGUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDhZKLU+0nIyXzZVlrkkAZSRHD4JcSP
+WMMZpfhKOug1/M4s6w/PqP9K0R/SuGDIp7douPJsJqs3Ew9Hl3tVAcmVFDzLkfEs
+c98MPd8ZGJtiTc5d2FWmf6gQTgdGnbsFCROJwwvvj1nib9i8MaHpuGLHev9cLRLl
+jFzhF+GQtsLrfBNagUmGQCgiYemjvF5k3D8AQN5x0BnesnABpaA/YZElDcq72gMr
+gLPXPmXhJygFGSq+tzqNCNW5+Crp5s+gcT2mAAyF7Qg5/PsutPnOSdxkgTofcMPJ
+Wvk9YO/7PsrQ+JCj109b1Imqba9+w/h/BnroHMLkdp2ua25aB5j3Q8ExAgMBAAGj
+VzBVMB0GA1UdDgQWBBRY9DnMfYFC245LhEOZvNNkmFeCgDAfBgNVHSMEGDAWgBRY
+9DnMfYFC245LhEOZvNNkmFeCgDATBgNVHSUEDDAKBggrBgEFBQcDATANBgkqhkiG
+9w0BAQUFAAOCAQEA1w9ncyNMzEm0nvH9Gxvxpb9USooYxs6ZlWsPcXNEhLT/j4q1
+4totAhSbPghcCpNQkZ9NUm5TloUdacFUIa8vcU6lyByYZqJmFrbUMGwR1oTOuqgI
+xvy9ZdE7Ei8Ub7BXMkRgTHan0c/dPo86k/mqssHR67Ykbh/YL2tH0P53yWW/+pOZ
+v6MajxtLc1RrTiGoIQPUYOBRu9dEFgepNkxVCFJwAXfy68B3e/JlbYExXeeGC5tl
+XxbmugYKBRKqdK0Oszw9p3xAUdDlwL9m3bG1IJLxcGB8ES9lJeDEocVGelcOwfy9
+4sxpaDGzVNUoHZG9uan1NDQqjzr2uaIDtRATww==</ds:X509Certificate>
+<ds:X509SubjectName>emailAddress=demo@llama.pe,CN=NOMBRE REPRESENTANTE LEGAL - CERTIFICADO PARA DEMOSTRACI\C3\93N,OU=DNI 9999999 RUC 20604182329 - CERTIFICADO PARA DEMOSTRACI\C3\93N,O=TU EMPRESA S.A.,L=LIMA,ST=LIMA,C=PE,DC=LLAMA.PE SA</ds:X509SubjectName>
+</ds:X509Data>
+</ds:KeyInfo>
+               
+                
+            </ds:Signature>
+            
+            
+         </ext:ExtensionContent>
+         
+        
+      </ext:UBLExtension>
+      
+    
+   </ext:UBLExtensions>
+   
+
+    
+   <cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+   
+    
+   <cbc:CustomizationID>1.0</cbc:CustomizationID>
+   
+    
+   <cbc:ID>RA-20200123-006</cbc:ID>
+   
+    
+   <cbc:ReferenceDate>2020-01-23</cbc:ReferenceDate>
+   
+    
+   <cbc:IssueDate>2020-01-23</cbc:IssueDate>
+   
+
+    
+   <cac:Signature>
+      
+        
+      <cbc:ID>RA-20200123-006</cbc:ID>
+      
+        
+      <cac:SignatoryParty>
+         
+            
+         <cac:PartyIdentification>
+            
+                
+            <cbc:ID>20604182329</cbc:ID>
+            
+            
+         </cac:PartyIdentification>
+         
+            
+         <cac:PartyName>
+            
+                
+            <cbc:Name>Leolandeo importaciones s.a.c.</cbc:Name>
+            
+            
+         </cac:PartyName>
+         
+        
+      </cac:SignatoryParty>
+      
+        
+      <cac:DigitalSignatureAttachment>
+         
+            
+         <cac:ExternalReference>
+            
+                
+            <cbc:URI>#SRA-20200123-006</cbc:URI>
+            
+            
+         </cac:ExternalReference>
+         
+        
+      </cac:DigitalSignatureAttachment>
+      
+    
+   </cac:Signature>
+      
+    
+     
+   <cac:AccountingSupplierParty>
+      
+        
+      <cbc:CustomerAssignedAccountID>20604182329</cbc:CustomerAssignedAccountID>
+      
+        
+      <cbc:AdditionalAccountID>6</cbc:AdditionalAccountID>
+      
+        
+      <cac:Party>
+                  
+            
+         <cac:PartyLegalEntity>
+            
+                
+            <cbc:RegistrationName>Leolandeo importaciones s.a.c.</cbc:RegistrationName>
+            
+            
+         </cac:PartyLegalEntity>
+         
+        
+      </cac:Party>
+      
+    
+   </cac:AccountingSupplierParty>
+   
+
+    
+   <sac:VoidedDocumentsLine>
+      
+        
+      <cbc:LineID>1</cbc:LineID>
+      
+        
+      <cbc:DocumentTypeCode>03</cbc:DocumentTypeCode>
+      
+        
+      <sac:DocumentSerialID>BF01</sac:DocumentSerialID>
+      
+        
+      <sac:DocumentNumberID>00000003</sac:DocumentNumberID>
+      
+        
+      <sac:VoidReasonDescription>Anulación del documento electrónico</sac:VoidReasonDescription>
+      
+    
+   </sac:VoidedDocumentsLine>
+   
+
+
+</VoidedDocuments>

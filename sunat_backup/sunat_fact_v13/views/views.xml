@@ -1,0 +1,327 @@
+<odoo>
+    <data>
+        <record id="invoice_form_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.form.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='other_info']" position="after">
+                    <page string="SUNAT e-fact" name='e_fact'>
+                        <group>
+                            <field name="api_message" string='Estado' placeholder='Documento contable sin emitir'/>
+                            <field name="discrepance_text" string='Discrepancia' attrs="{'invisible':[('discrepance_text','=','')]}"/>
+                             <field name="api_message_baja_doc" string='Comunicación de baja' attrs="{'invisible':[('api_message_baja_doc','ilike','sin_baja')]}"/>
+                        </group>
+                        <group >
+                            <field name="signed_document" string='XML - Firmado'  widget="binary" filename="signed_document_filename" attrs="{'invisible':[('api_message','=','Documento contable sin emitir.')]}"/>   												
+						    <field name="signed_document_filename" invisible="1"/>
+                        </group>                        
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='date_invoice']" position="replace">
+                    <field name="date_invoice" autocomplete="off"/>
+                </xpath>
+                <xpath expr="//field[@name='number']" position="after">
+                    <field name="was_cancelled" invisible="1"/>
+                    <div class="invoice-cancelled red-warn"  attrs="{'invisible':[('was_cancelled','ilike','FAIL')]}">Con Baja</div>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_account_invoice_refund_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.refund.form</field>
+            <field name="model">account.invoice.refund</field>
+            <field name="inherit_id" ref="account.view_account_invoice_refund" />
+            <field name="arch" type="xml">
+                <xpath expr="/form/footer/button[@name='invoice_refund']" position="replace">
+                    <button string='Agregar Nota' name="invoice_refund" type="object" class="btn-primary"/>
+                </xpath>
+                <xpath expr="/form/group/group/field[@name='filter_refund']" position="replace">
+                    <field name="filter_refund" attrs="{'invisible': [('refund_only','=',True)]}" widget="radio" string="Método" invisible="1"/>
+                </xpath>
+                <xpath expr="/form/group/group/field[@name='filter_refund']" position="after">
+                    <field name="sunat_note" string="Nota" />
+                </xpath>
+                <xpath expr="/form/group/group/field[@name='sunat_note']" position="after">
+                    <field name="credit_discrepance" string="Discrepancia"  attrs="{'invisible':[('sunat_note','=','08')]}"/>
+                </xpath>
+                <xpath expr="/form/group/group/field[@name='sunat_note']" position="after">
+                    <field name="debit_discrepance" string="Discrepancia"  attrs="{'invisible':[('sunat_note','=','07')]}"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="res_company_form_inherit">
+            <field name="name">res.company.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="before">
+                    <field name="sunat_tipo_documento" string='Tipo Documento' class="document-type"/>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="replace">
+                    <field name="vat" string='RUC' class="company_vat"/>
+                </xpath>
+                <xpath expr="//notebook[last()]" position="inside">
+                    <page string="Sunat e-Fact" name="geo_location">
+                        <group>
+                            <div class="emission-container">
+                                <h1>Emisión</h1>
+                                <label for="sol_ruc"/>
+                                <div>
+                                    <field name="sol_ruc" string="RUC" class="o_input"/>
+                                </div>
+                                <label for="sol_username"/>
+                                <div>
+                                    <field name="sol_username" string="Usuario" class="o_input"/>
+                                </div>
+                                <label for="sol_password"/>
+                                <div>
+                                    <field name="sol_password" string="Contraseña" class="o_input"/>
+                                </div>
+                                <label for="sunat_request_type"/>
+                                <div>
+                                    <field name="sunat_request_type" string="Tipo de Emisión" class="o_input"/>
+                                </div>
+                                <label for="api_mode"/>
+                                <div>
+                                    <field name="api_mode" string="Modo Servicio" class="o_input"/>
+                                </div>
+                                <label for="cert_pem"/>
+                                <div>
+                                    <field name="cert_pem_filename" readonly="1"/>
+                                    <br></br>
+                                    <field name="cert_pem" string="Certificado (PEM)" class="o_input"/>
+                                </div>
+                                 <label for="key_pem"/>
+                                <div>
+                                    <field name="key_pem_filename" readonly="1"/>
+                                    <br></br>
+                                    <field name="key_pem" string="Clave Privaa (PEM)d" class="o_input"/>
+                                </div>
+                                <label for="key_pass"/>
+                                <div>
+                                    <field name="key_pass" string="Contraseña del Certificado" class="o_input"/>
+                                </div>
+                            </div>
+                            <div class="company-general-information">
+                                <h1>Información Fiscal</h1>
+                                <div class="company-general-information-container"></div>
+                            </div>
+                        </group>
+                        <group>
+                            <div class="representantes">
+                                <div class="representantes-list">
+                                    <h1>Representantes</h1>
+                                    <div class="buttons-container">
+                                        <div class="btn-custom-sunat btn-representante-create">
+                                            <i class="fa fa-plus"></i>
+                                        </div>
+                                    </div>
+                                    <table class="o_list_view table table-condensed table-striped o_list_view_ungrouped">
+                                        <thead>
+                                            <tr>
+                                                <th class="o_column_sortable" data-original-title="" title="">Tipo de Documento</th>
+                                                <th class="o_column_sortable" data-original-title="" title="">Número de Documento</th>
+                                                <th class="o_column_sortable" data-original-title="" title="">Nombre</th>
+                                                <th class="o_column_sortable" data-original-title="" title="">Cargo</th>
+                                                <th class="o_column_sortable" data-original-title="" title="">Fecha Desde</th>
+                                                <th class="o_column_sortable" data-original-title="" title="">Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                                <div class="representantes-form-container">
+                                    <h1>Representante</h1>
+                                    <div class="representantes-formu">
+                                        <!--  <label for="doc_type">Typo Documento</label><div><input id="doc_type"  type="text"/></div><label for="doc_number">"Número de Documento</label><div><input id="doc_number" type="text"/></div><label for="position">Cargo</label><div><input id="position" type="text"/></div><label class="input-on-edit"  for="date_added">Fecha desde</label><div><input class="input-on-edit" id="date_added" type="text" disabled="disabled"/></div>-->
+                                    </div>
+                                    <div class="buttons-container">
+                                        <div class="btn-custom-sunat btn-representante-back btn-custom-sunat-grey">
+                                            <i class="fa fa-chevron-left"></i>
+                                        </div>
+                                        <div class="btn-custom-sunat btn-representante-save" id_representant="" id_company="{id:res_company.id}">
+                                            <i class="fa fa-save"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='street']" position="before">
+                    <div>
+                        <a href="https://bit.ly/2XPLH4k" target="_blank">
+                            <i class="fa fa-info-circle"></i>
+                        </a>
+                        <field name="ubigeo" placeholder="Ubicación Geográfica" invisible="1"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        <record id="account_invoice_form_view" model="ir.ui.view">
+            <field name="name">account.invoice.form.view</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <h1 class="mt0" position="after">
+                    <div class="oe_button_box">
+                        <field name="qr_image" widget="image" width="100" height="100"/>
+                    </div>
+                </h1>
+                <field name="partner_id" position="after">
+                    <field name="qr_in_report" invisible="1"/></field>
+            </field>
+        </record>
+        <record id="delivery_form_view_extend" model="ir.ui.view">
+            <field name="name">delivery.carrier.form.view</field>
+            <field name="model">delivery.carrier</field>
+            <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <div>
+                        <field name="ruc" string="RUC" placeholder="RUC"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_picking_withcarrier_out_form_extended" model="ir.ui.view">
+            <field name="name">delivery.stock.picking_withcarrier.form.view</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <h1 class="d-none d-md-block" position="after">
+                    <div class="oe_button_box">
+                        <field name="qr_image" widget="image" width="100" height="100"/>
+                    </div>
+                </h1>
+                <xpath expr="//page[@name='note']" position="after">
+                    <page string="SUNAT e-fact" name='e_fact'>
+                        <group>
+                            <field name="api_message" string='Estado' placeholder='Documento contable sin emitir'/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_partners_form_website_extended" model="ir.ui.view">
+            <field name="name">view.res.partner.form.website</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='street']" position="before">
+                    <div>
+                        <a href="https://bit.ly/2XPLH4k" target="_blank">
+                            <i class="fa fa-info-circle"></i>
+                        </a>
+                        <field name="ubigeo" placeholder="Ubicación Geográfica" invisible="1"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="before">
+                    <field name="sunat_tipo_documento" string='Tipo documento' class="document-type"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="account_tax_form_sunat_tributo" model="ir.ui.view">
+            <field name="name">account.tax.form.sunat.tributo</field>
+            <field name="model">account.tax</field>
+            <field name="inherit_id" ref="account.view_tax_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//page" position="after">
+                        <page string="Sunat e-Fact" name="sunat_tax">
+                            <group class="o_group_2_col">
+                                <field name="sunat_tributo" string='Sunat Tributo' class="o_input o_field_widget o_required_modifier custom_input"/>
+                                <field name="sunat_tributo_afectacion_igv" string='Afectación IGV' class="o_input o_field_widget o_required_modifier custom_input" attrs="{'invisible':[('sunat_tributo','==','10000')]}"/>
+                                <field name="sunat_tributo_calculo_isc" string='Cálculo ISC' class="o_input o_field_widget o_required_modifier custom_input" attrs="{'invisible':[('sunat_tributo','!=','2000')]}"/>
+                            </group>
+                        </page>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="sunat_product_tpl_form" model="ir.ui.view">
+            <field name="name">product.template.purchase.button.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='list_price']" position="before">
+                    <field name="sunat_price_type" string='Sunat tipo precio'/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sunat_product_tpl_form" model="ir.ui.view">
+            <field name="name">product.template.purchase.button.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook[last()]" position="inside">
+                    <page string="Sunat e-Fact" name='e_fact'>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="sunat_price_type"/>
+                                    <field name="sunat_price_type" string='Tipo precio'/>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="sunat_product_code"/>
+                                    <field name="sunat_product_code" string='Código Producto' id="sunat_product_code" class="ItemClassificationCode"/>
+                                </td>
+                                <td>
+                                    <i class="selector_sunat_product_code fa fa-external-link btn btn-secondary "></i>
+                                </td>
+                            </tr>
+                        </table>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_uom_form_view_inherit" model="ir.ui.view">
+            <field name="name">uom.product_uom_form_view_inherit</field>
+            <field name="model">uom.uom</field>
+            <field name="inherit_id" ref="uom.product_uom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[last()]" position="inside">
+                    <group col="0">
+                        <field name="sunat_unit_code"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_restablecer_documento" model="ir.actions.server">
+            <field name="name">Restablecer documento</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_account_invoice" />
+            <field name="binding_model_id" ref="model_account_invoice" />
+            <field name="state">code</field>
+            <field name="code">action = records.restablecer_documento()</field>
+        </record>
+
+        <record id="action_comunicacion_baja" model="ir.actions.server">
+            <field name="name">Comunicación de baja</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_account_invoice" />
+            <field name="binding_model_id" ref="model_account_invoice" />
+            <field name="state">code</field>
+            <field name="code">action = records.comunicacion_de_baja()</field>
+        </record>
+
+        <function model="ir.model.fields" name="formbuilder_whitelist">
+            <value>res.partner</value>
+            <value eval="[
+                'name', 'phone', 'email',
+                'city', 'zip', 'street', 'street2', 'state_id', 'country_id',
+                'vat', 'company_name', 'province_id', 'district_id','ubigeo'
+            ]"/>
+        </function>
+    </data>
+</odoo>

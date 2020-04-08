@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:sac="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <ds:Signature>
+               <ds:SignedInfo>
+                  <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                  <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                  <ds:Reference URI="">
+                     <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                     </ds:Transforms>
+                     <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                     <ds:DigestValue>YhG4a3sMsSzwuuJ1lg8828SPSe4=</ds:DigestValue>
+                  </ds:Reference>
+               </ds:SignedInfo>
+               <ds:SignatureValue>IMkczCIXyx4yRWFIrQyKWGW0xSvDeRK/vLvr/J20HDm/83guuJkmkAAQLZmXMfGJ
+8NZtbzjVy49CizcBRb/7xS5FM4+5rfqujDf7sOzMQbR8Mw92PSwE3kTuK98+jMC7
+/RsZ0gBB1T18m0i8BkDux+vMNajDBXEsnAB/xWY+8qD24DIKGw7b5Tp/fGqcNrt7
+wNghVex7/EVNQZh6guqof0mPaQIi+zaViUPbcqK9VFZ+NVW/3zg9v/KwJDRzca7K
+Gw3+k6kBwWSMYTh3oNJJqCNCJ5DDFuxVNbXfQdOJSfiMyhgypQPP9/D3QigFcpfT
+7X6h5abMxEI0nUpl+VR8vQ==</ds:SignatureValue>
+               <ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>MIIE+DCCA+CgAwIBAgIJAMaE6vkeOw6cMA0GCSqGSIb3DQEBBQUAMIIBDTEbMBkG
+CgmSJomT8ixkARkWC0xMQU1BLlBFIFNBMQswCQYDVQQGEwJQRTENMAsGA1UECAwE
+TElNQTENMAsGA1UEBwwETElNQTEYMBYGA1UECgwPVFUgRU1QUkVTQSBTLkEuMUUw
+QwYDVQQLDDxETkkgOTk5OTk5OSBSVUMgMjA2MDQxODIzMjkgLSBDRVJUSUZJQ0FE
+TyBQQVJBIERFTU9TVFJBQ0nDk04xRDBCBgNVBAMMO05PTUJSRSBSRVBSRVNFTlRB
+TlRFIExFR0FMIC0gQ0VSVElGSUNBRE8gUEFSQSBERU1PU1RSQUNJw5NOMRwwGgYJ
+KoZIhvcNAQkBFg1kZW1vQGxsYW1hLnBlMB4XDTIwMDEyMzAxNDg0MloXDTIyMDEy
+MjAxNDg0MlowggENMRswGQYKCZImiZPyLGQBGRYLTExBTUEuUEUgU0ExCzAJBgNV
+BAYTAlBFMQ0wCwYDVQQIDARMSU1BMQ0wCwYDVQQHDARMSU1BMRgwFgYDVQQKDA9U
+VSBFTVBSRVNBIFMuQS4xRTBDBgNVBAsMPEROSSA5OTk5OTk5IFJVQyAyMDYwNDE4
+MjMyOSAtIENFUlRJRklDQURPIFBBUkEgREVNT1NUUkFDScOTTjFEMEIGA1UEAww7
+Tk9NQlJFIFJFUFJFU0VOVEFOVEUgTEVHQUwgLSBDRVJUSUZJQ0FETyBQQVJBIERF
+TU9TVFJBQ0nDk04xHDAaBgkqhkiG9w0BCQEWDWRlbW9AbGxhbWEucGUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDhZKLU+0nIyXzZVlrkkAZSRHD4JcSP
+WMMZpfhKOug1/M4s6w/PqP9K0R/SuGDIp7douPJsJqs3Ew9Hl3tVAcmVFDzLkfEs
+c98MPd8ZGJtiTc5d2FWmf6gQTgdGnbsFCROJwwvvj1nib9i8MaHpuGLHev9cLRLl
+jFzhF+GQtsLrfBNagUmGQCgiYemjvF5k3D8AQN5x0BnesnABpaA/YZElDcq72gMr
+gLPXPmXhJygFGSq+tzqNCNW5+Crp5s+gcT2mAAyF7Qg5/PsutPnOSdxkgTofcMPJ
+Wvk9YO/7PsrQ+JCj109b1Imqba9+w/h/BnroHMLkdp2ua25aB5j3Q8ExAgMBAAGj
+VzBVMB0GA1UdDgQWBBRY9DnMfYFC245LhEOZvNNkmFeCgDAfBgNVHSMEGDAWgBRY
+9DnMfYFC245LhEOZvNNkmFeCgDATBgNVHSUEDDAKBggrBgEFBQcDATANBgkqhkiG
+9w0BAQUFAAOCAQEA1w9ncyNMzEm0nvH9Gxvxpb9USooYxs6ZlWsPcXNEhLT/j4q1
+4totAhSbPghcCpNQkZ9NUm5TloUdacFUIa8vcU6lyByYZqJmFrbUMGwR1oTOuqgI
+xvy9ZdE7Ei8Ub7BXMkRgTHan0c/dPo86k/mqssHR67Ykbh/YL2tH0P53yWW/+pOZ
+v6MajxtLc1RrTiGoIQPUYOBRu9dEFgepNkxVCFJwAXfy68B3e/JlbYExXeeGC5tl
+XxbmugYKBRKqdK0Oszw9p3xAUdDlwL9m3bG1IJLxcGB8ES9lJeDEocVGelcOwfy9
+4sxpaDGzVNUoHZG9uan1NDQqjzr2uaIDtRATww==</ds:X509Certificate>
+<ds:X509SubjectName>emailAddress=demo@llama.pe,CN=NOMBRE REPRESENTANTE LEGAL - CERTIFICADO PARA DEMOSTRACI\C3\93N,OU=DNI 9999999 RUC 20604182329 - CERTIFICADO PARA DEMOSTRACI\C3\93N,O=TU EMPRESA S.A.,L=LIMA,ST=LIMA,C=PE,DC=LLAMA.PE SA</ds:X509SubjectName>
+</ds:X509Data>
+</ds:KeyInfo>
+            </ds:Signature>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+   <cbc:CustomizationID>2.0</cbc:CustomizationID>
+   <cbc:ID>BF01-00000004</cbc:ID>
+   <cbc:IssueDate>2020-01-25</cbc:IssueDate>
+   <cbc:IssueTime>21:36:03</cbc:IssueTime>
+   <cbc:InvoiceTypeCode listAgencyName="PE:SUNAT" listID="0101" listName="SUNAT:Identificador de Tipo de Documento" listSchemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo51" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01">03</cbc:InvoiceTypeCode>
+   <cbc:Note languageLocaleID="1000">TREINTA Y  SIETE Y 0/100 SOLES</cbc:Note>
+   <cbc:DocumentCurrencyCode listAgencyName="United Nations Economic Commission for Europe" listID="ISO 4217 Alpha" listName="Currency">PEN</cbc:DocumentCurrencyCode>
+   <cbc:LineCountNumeric>1</cbc:LineCountNumeric>
+   <cac:Signature>
+      <cbc:ID>SBF01-00000004</cbc:ID>
+      <cac:SignatoryParty>
+         <cac:PartyIdentification>
+            <cbc:ID>20604182329</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:PartyName>
+            <cbc:Name>Leolandeo importaciones s.a.c.</cbc:Name>
+         </cac:PartyName>
+      </cac:SignatoryParty>
+      <cac:DigitalSignatureAttachment>
+         <cac:ExternalReference>
+            <cbc:URI>#SBF01-00000004</cbc:URI>
+         </cac:ExternalReference>
+      </cac:DigitalSignatureAttachment>
+   </cac:Signature>
+   <cac:AccountingSupplierParty>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeAgencyName="PE:SUNAT" schemeID="6" schemeName="SUNAT:Identificador de Documento de Identidad" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">20604182329</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:PartyName>
+            <cbc:Name>Leolandeo importaciones s.a.c.</cbc:Name>
+         </cac:PartyName>
+         <cac:PartyLegalEntity>
+            <cbc:RegistrationName>Leolandeo importaciones s.a.c.</cbc:RegistrationName>
+            <cac:RegistrationAddress>
+               <cbc:AddressTypeCode>140101</cbc:AddressTypeCode>
+            </cac:RegistrationAddress>
+         </cac:PartyLegalEntity>
+      </cac:Party>
+   </cac:AccountingSupplierParty>
+   <cac:AccountingCustomerParty>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeAgencyName="PE:SUNAT" schemeID="6" schemeName="Documento de Identidad" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">20535694550</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:PartyLegalEntity>
+            <cbc:RegistrationName>Peru money sociedad anonima cerrada</cbc:RegistrationName>
+         </cac:PartyLegalEntity>
+      </cac:Party>
+   </cac:AccountingCustomerParty>
+   <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="PEN">5.64</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+         <cbc:TaxableAmount currencyID="PEN">31.36</cbc:TaxableAmount>
+         <cbc:TaxAmount currencyID="PEN">5.64</cbc:TaxAmount>
+         <cbc:Percent>18.0</cbc:Percent>
+         <cac:TaxCategory>
+            <cbc:ID schemeAgencyID="6" schemeID="UN/ECE 5153">S</cbc:ID>
+            <cac:TaxScheme>
+               <cbc:ID schemeAgencyID="6" schemeID="UN/ECE 5153">1000</cbc:ID>
+               <cbc:Name>IGV</cbc:Name>
+               <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+            </cac:TaxScheme>
+         </cac:TaxCategory>
+      </cac:TaxSubtotal>
+   </cac:TaxTotal>
+   <cac:LegalMonetaryTotal>
+      <cbc:LineExtensionAmount currencyID="PEN">31.36</cbc:LineExtensionAmount>
+      <cbc:TaxExclusiveAmount currencyID="PEN">31.36</cbc:TaxExclusiveAmount>
+      <cbc:TaxInclusiveAmount currencyID="PEN">37.00</cbc:TaxInclusiveAmount>
+      <cbc:PayableAmount currencyID="PEN">37.00</cbc:PayableAmount>
+   </cac:LegalMonetaryTotal>
+   <cac:InvoiceLine>
+      <cbc:ID>1</cbc:ID>
+      <cbc:InvoicedQuantity unitCode="NIU" unitCodeListAgencyName="United Nations Economic Commission for Europe" unitCodeListID="UN/ECE rec 20">1.0</cbc:InvoicedQuantity>
+      <cbc:LineExtensionAmount currencyID="PEN">31.36</cbc:LineExtensionAmount>
+      <cac:PricingReference>
+         <cac:AlternativeConditionPrice>
+            <cbc:PriceAmount currencyID="PEN">37.00</cbc:PriceAmount>
+            <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+         </cac:AlternativeConditionPrice>
+      </cac:PricingReference>
+      <cac:TaxTotal>
+         <cbc:TaxAmount currencyID="PEN">5.64</cbc:TaxAmount>
+         <cac:TaxSubtotal>
+            <cbc:TaxableAmount currencyID="PEN">31.36</cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID="PEN">5.64</cbc:TaxAmount>
+            <cac:TaxCategory>
+               <cbc:ID schemeAgencyID="6" schemeID="UN/ECE 5153">S</cbc:ID>
+               <cbc:Percent>18.0</cbc:Percent>
+               <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT" listName="SUNAT:Codigo de Tipo de Afectación del IGV" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+               <cac:TaxScheme>
+                  <cbc:ID schemeAgencyName="United Nations Economic Commission for Europe" schemeID="UN/ECE 5153" schemeName="Tax Scheme Identifier">1000</cbc:ID>
+                  <cbc:Name>IGV</cbc:Name>
+                  <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+               </cac:TaxScheme>
+            </cac:TaxCategory>
+         </cac:TaxSubtotal>
+      </cac:TaxTotal>
+      <cac:Item>
+         <cbc:Description>[DS-2CE16C0T-IRPF] CAMARA CCTV TUBO HD PLASTICA</cbc:Description>
+         <cac:SellersItemIdentification>
+            <cbc:ID>173</cbc:ID>
+         </cac:SellersItemIdentification>
+         <cac:CommodityClassification>
+            <cbc:ItemClassificationCode>None</cbc:ItemClassificationCode>
+         </cac:CommodityClassification>
+      </cac:Item>
+      <cac:Price>
+         <cbc:PriceAmount currencyID="PEN">31.36</cbc:PriceAmount>
+      </cac:Price>
+   </cac:InvoiceLine>
+</Invoice>

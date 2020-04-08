@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+
+        
+           
+            <xpath expr="//h2" position="replace">
+                <t t-if="o and 'company_id' in o">
+                    <t t-set="company" t-value="o.company_id"></t>
+                </t>
+                <t t-if="not o or not 'company_id' in o">
+                    <t t-set="company" t-value="res_company"></t>
+                </t>
+                <link href="/einvoice_pdf/static/src/css/invoice_template_pdf.css" rel="stylesheet"/>
+                <script src="/einvoice_pdf/static/src/js/invoice_template.js" rel="stylesheet"/>  
+                
+            </xpath>
+
+            <xpath expr="//table[hasclass('o_main_table')]" position="before">
+           <table class="table table-sm table-cst">
+                <tr>
+                    <td colspan="5">
+                        <div>
+                            <div class="row-invoice-details-leyend">Datos del cliente</div>
+                            <div class="row-invoice-details-inner"><span t-field="o.partner_id.name"/></div>
+                        </div>
+                    </td>     
+                </tr>
+                <tr>
+                    <td colspan="5">
+                <div class="row-invoice-details">
+                    <div class="row-invoice-details-leyend">Dirección</div>
+                    <div class="row-invoice-details-inner">
+                        <span t-field="o.partner_id.street"/>
+                        <span> - </span>
+                        <span class="header-company-basic-info" t-esc="company.province_id.name.encode('utf-8', 'ignore').capitalize()"/>
+                        <span> - </span>
+                        <span class="header-company-basic-info" t-esc="company.district_id.name.encode('utf-8', 'ignore').capitalize()"/>
+                        <span> - C.P. </span>
+                        <span class="header-company-basic-info" t-esc="company.zip"/>
+                    </div>
+                </div>
+                    </td>     
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <div class="row-invoice-details-leyend pal-10" >RUC</div>
+                            <div class="row-invoice-details-inner paln-10"><span t-field="o.partner_id.vat"/></div>
+                        </div>
+                    </td>     
+                    <td>
+                        <div>
+                            <div class="row-invoice-details-leyend pal-10" style="width: 120px;">Orden de compra</div>
+                            <div class="row-invoice-details-inner paln-10"><span t-field="o.origin"/></div>
+                        </div>
+                    </td> 
+                    <td>
+                        <div>
+                            <div class="row-invoice-details-leyend pal-10"  style="width: 100px;">Fecha O/C</div>
+                            <div class="row-invoice-details-inner paln-10"></div>
+<!--                            <span t-field="o.partner_id.vat"/>-->
+                        </div>
+                    </td> 
+                    <td>
+                        <div>
+                            <div class="row-invoice-details-leyend pal-10"  style="width: 110px;">Tipo de pago</div>
+                            <div class="row-invoice-details-inner paln-10">Contado</div>
+                        </div>
+                    </td> 
+                    <td>
+                        <div>
+                            <div class="row-invoice-details-leyend pal-10">Vencimiento</div>
+                            <div class="row-invoice-details-inner paln-10"><span t-field="o.date_due"/></div>
+                        </div>
+                    </td> 
+                </tr>                                                
+                   </table>
+                   
+                    <table  class="table table-sm table-cst2">
+                     <tr class="second-dinamyc-width">
+                    <td>
+                        <div>
+                            <div class="row-invoice-details-leyend pal-10"  style="width: 120px;">Fecha de emisión</div>
+                            <div class="row-invoice-details-inner paln-10"><span t-field="o.date_invoice"/></div>
+                        </div>
+                    </td>     
+                    <td>
+                        <div>
+                           <div class="row-invoice-details-leyend pal-10">Divisa</div>
+                            <div class="row-invoice-details-inner paln-10"><span t-field="o.company_currency_id.name"/></div>
+                        </div>
+                    </td> 
+                    <td>
+                    <div>
+                           <div class="row-invoice-details-leyend pal-10">Vendedor</div>
+                        <div class="row-invoice-details-inner paln-10"><span t-field="o.user_id.name"/></div>
+                        </div>
+                    </td> 
+                    <td>
+                    <div>
+                           <div class="row-invoice-details-leyend pal-10">Guia Nº</div>
+                        <div class="row-invoice-details-inner paln-10">T001-00000001</div>
+                        </div>
+                    </td> 
+                </tr> 
+                    </table>
+            </xpath>
+            <xpath expr="//div[@id='total']" position="after">
+            <div class="custom-details">
+                    <span>Son: </span><span t-field="o.sunat_total_letters"/>
+                </div>  
+                 <div class="qr-top-container">
+                    <div class="qr-container">
+                        <span t-field="o.qr_image" t-options='{"widget": "image"}'/>                                                
+                    </div>                    
+                </div>      
+                <div class="digest_value"><span>Código HASH: </span><span t-field="o.digest_value"/></div>
+                <div class="bottom-txt-container">
+                     <div>
+                        <span>Representación impresa de la <span t-if="o.journal_id"><span t-field="o.journal_id.name" /></span> <span t-if="not o.journal_id">Orden</span>, consulte en https://e-consultaruc.sunat.gob </span>
+                    </div>
+                    <div><span>PUEDE DESCARGAR UNA COPIA EN NUESTRA PÁGINA WEB: WWW.LEOLANDEO.COM</span></div>
+<!--                    <div><span>Autorizado mediante RESOLUCIÓN DE INTENDENCIA : 0340050008568/SUNAT</span></div>-->
+                </div>            
+            </xpath>
+           
+        </template>
+
+        <template id="external_layout_header" inherit_id="web.external_layout_standard">
+            <xpath expr="//div[@class='header']" position="replace">
+                <link href="/einvoice_pdf/static/src/css/invoice_template.css" rel="stylesheet"/>
+                <div class="header" style="font-family: 'Roboto', sans-serif;font-weight: bold;">
+                    <div class="header-custom">
+                        
+                        <div class="header-tabbed"><img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 119px;opacity:1" alt="Logo"/></div>
+                        <div class="header-tabbed uppercase-company">
+                            <div class="header-company-name" t-esc="company.name.encode('utf-8', 'ignore').upper()"/>
+                            <div class="header-company-basic-info" t-esc="company.street.encode('utf-8', 'ignore').capitalize()"/>
+                            <div class="header-company-basic-info">
+                                <span class="header-company-basic-info" t-esc="company.province_id.name.encode('utf-8', 'ignore').capitalize()"/>
+                                <span> - </span>
+                                <span class="header-company-basic-info" t-esc="company.district_id.name.encode('utf-8', 'ignore').capitalize()"/>
+                            </div> 
+                            <div class="header-company-basic-info">
+                                <span> TEL: </span>
+                                <span class="header-company-basic-info" t-esc="company.phone.encode('utf-8', 'ignore')"/>                               
+                            </div>     
+                            <div class="header-company-basic-info"  t-if="company.email">
+                                <span> EMAIL: </span>
+                                <span class="header-company-basic-info" t-esc="company.email.encode('utf-8', 'ignore').lower()"/>
+                            </div>                        
+                        </div>
+                        <div class="header-tabbed">
+                            <div class="box-company-fiscal-info">
+                                <div>
+                                    <span> RUC: </span>
+                                    <span t-esc="company.vat"/>
+                                </div>    
+                                <div t-if="o.journal_id"><div t-field="o.journal_id.name"/></div>
+                                <div t-if="o.number"><div  t-field="o.number"/></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        <template id="external_layout_footer" inherit_id="web.external_layout_standard">
+            <xpath expr="//div[@class='text-center']" position="replace">
+            
+              
+            </xpath>
+             
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<DespatchAdvice xmlns="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:sac="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <ds:Signature>
+               <ds:SignedInfo>
+                  <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                  <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                  <ds:Reference URI="">
+                     <ds:Transforms>
+                        <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                     </ds:Transforms>
+                     <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                     <ds:DigestValue>UpZTUxWCQ75qvTTw22DyknDXvaQ=</ds:DigestValue>
+                  </ds:Reference>
+               </ds:SignedInfo>
+               <ds:SignatureValue>B3rv6/P2a2avn562i9cKs/EpireUai+y8Trij29TcfFMRbi+Rzt7I5Ddx8Sf+Uue
+zHMng6XTA53FSxf8yarsYnVeNt1sNWj0GOLwrW95whD1C4HIMqd267CM2Md+AYDy
+HS5UdA3p74stCgQmUat8mjjevZcM2ADoHFxVdyMjDwaWpcQDpQ8F7lRWH3Mgssyu
+WbovtUbijS2Hp/eTjwVuT+LqKN8TdVmiIrsyYp9aJaA6EJibSy3NF5daulEJQSS7
+4q89qoEyKOSGEfvPeQszTjXUhNS9561Wuas+Z8iOULgmHKiBfK2/ulv3nGk/sAlp
+Gg2c3cBh46WzHs2qXj0rBQ==</ds:SignatureValue>
+               <ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>MIIFOzCCBCOgAwIBAgIIUl87DJAKxOwwDQYJKoZIhvcNAQELBQAwRjEkMCIGA1UE
+AwwbTGxhbWEucGUgU0hBMjU2IFN0YW5kYXJkIENBMREwDwYDVQQKDAhMTEFNQS5Q
+RTELMAkGA1UEBhMCUEUwHhcNMjAwMTA0MTg0MzE1WhcNMjIwMTAzMTg0MzAwWjCC
+ARQxNDAyBgNVBAkMK0FWLiBTQU5UQSBST1NBIExULiAxOCBNWi4gRiBBLlYuIExB
+IEZMT1JJREExJjAkBgkqhkiG9w0BCQEWF2dpbm9idXN0aW9zQGhvdG1haWwuY29t
+MSUwIwYDVQQDDBxCVVNUSU9TIE1VTk9aIEdJTk8gR0lBTlBBT0xPMREwDwYDVQQF
+EwgwOTQ2MzczMzEUMBIGA1UECwwLMTAwOTQ2MzczMzkxITAfBgNVBAsMGFZhbGlk
+YXRlZCBieSBMbGFtYS5wZSBFUjElMCMGA1UECgwcQlVTVElPUyBNVU5PWiBHSU5P
+IEdJQU5QQU9MTzENMAsGA1UEBwwETElNQTELMAkGA1UEBhMCUEUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCn90E6d2pusm3F6c15m/+Nf0j06oDNfGjy
+9NZ99O72t10WskIBgsIjPd+OFqbh3KsKpsVP3i1LgxXfBUKo4BsSasTbJ00k77Wn
+H6nMYtKrV5XCsYniCm9tqVsPYRpFBxq4BaEVfwWQ4T6WiqfwHLSLZFo2P2JllsuX
+gCWhpEsbCqDsn1qf+UMBN2NpQY8R0893FKg3Y/pzzS03ObGeXe3E3KE5Rx1syCcV
+QiUDDiDn/Gx0gkrnjtcwy0aWOx5J6KzvcsDolM6vG2nLec2KwbbEcQj/CRTJxeth
+gGa6CeGtU7r3bS6V17cLvilUpRXBu/w/PRYC8pkSij8FBf/I2ECtAgMBAAGjggFb
+MIIBVzAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFF2IW63rZfv+aKLk2W89V3Ki
+7yuZMDAGCCsGAQUFBwEBBCQwIjAgBggrBgEFBQcwAYYUaHR0cDovL29jc3AubGxh
+bWEucGUwIgYDVR0RBBswGYEXZ2lub2J1c3Rpb3NAaG90bWFpbC5jb20wRgYDVR0g
+BD8wPTA7Bg0rBgEEAYOXdwABAAIBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vbGxh
+bWEucGUvcmVwb3NpdG9yeS8wHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwME
+MDoGA1UdHwQzMDEwL6AtoCuGKWh0dHA6Ly9jcmwubGxhbWEucGUvbGxhbWFwZXN0
+YW5kYXJkY2EuY3JsMB0GA1UdDgQWBBSCNyMo8njbNZ8mqIfzRB2Ma/lMczAOBgNV
+HQ8BAf8EBAMCBsAwDQYJKoZIhvcNAQELBQADggEBAIiS4Glp/1yoehBq3hZuwn2k
+UaUIAX4+HTuimdgpEzbJyQuH1qWFoDULB33ySiwEp62NwK/y1Hm7xCZQbyIJPetp
+r1GFcXM6irb0fbnDtFzCY3ltjwXgJmkB6n5NregciMAQFoCxKlktcG1/zf9Fs4Hd
+iresK/Mogeyq7PYWTIPWI3B5S60/mAjaj8YJ9IjJ1FEYmhvdiLMzo+2pEc1PkA9X
+ZLcAbA4o+0ytHLFPcltsDqSwIOk1051xU+X6+RDVhSD9FOtTUWyfKZkGmwEuSROQ
+loEvRc20KbIx5rNzk5V+PsTJFi9XAftm2v9Pt8yXkypNbp+s0Cr+6lzSfVyV+us=</ds:X509Certificate>
+<ds:X509SubjectName>C=PE,L=LIMA,O=BUSTIOS MUNOZ GINO GIANPAOLO,OU=Validated by Llama.pe ER,OU=10094637339,serialNumber=09463733,CN=BUSTIOS MUNOZ GINO GIANPAOLO,emailAddress=ginobustios@hotmail.com,street=AV. SANTA ROSA LT. 18 MZ. F A.V. LA FLORIDA</ds:X509SubjectName>
+</ds:X509Data>
+</ds:KeyInfo>
+            </ds:Signature>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+   <cbc:CustomizationID>1.0</cbc:CustomizationID>
+   <cbc:ID>T001-00000001</cbc:ID>
+   <cbc:IssueDate>2020-01-22</cbc:IssueDate>
+   <cbc:DespatchAdviceTypeCode>09</cbc:DespatchAdviceTypeCode>
+   <cbc:Note>False</cbc:Note>
+   <cac:Signature>
+      <cbc:ID>T001-00000001</cbc:ID>
+      <cac:SignatoryParty>
+         <cac:PartyIdentification>
+            <cbc:ID>20604182329</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:PartyName>
+            <cbc:Name>Leolandeo importaciones s.a.c.</cbc:Name>
+         </cac:PartyName>
+      </cac:SignatoryParty>
+      <cac:DigitalSignatureAttachment>
+         <cac:ExternalReference>
+            <cbc:URI>#ST001-00000001</cbc:URI>
+         </cac:ExternalReference>
+      </cac:DigitalSignatureAttachment>
+   </cac:Signature>
+   <cac:DespatchSupplierParty>
+      <cbc:CustomerAssignedAccountID schemeID="6">20604182329</cbc:CustomerAssignedAccountID>
+      <cac:Party>
+         <cac:PartyLegalEntity>
+            <cbc:RegistrationName>Leolandeo importaciones s.a.c.</cbc:RegistrationName>
+         </cac:PartyLegalEntity>
+      </cac:Party>
+   </cac:DespatchSupplierParty>
+   <cac:DeliveryCustomerParty>
+      <cbc:CustomerAssignedAccountID schemeID="6">20602572758</cbc:CustomerAssignedAccountID>
+      <cac:Party>
+         <cac:PartyLegalEntity>
+            <cbc:RegistrationName>Exportaciones liberte&amp;#241;os hj s.a.c.</cbc:RegistrationName>
+         </cac:PartyLegalEntity>
+      </cac:Party>
+   </cac:DeliveryCustomerParty>
+   <cac:Shipment>
+      <cbc:ID>00000001</cbc:ID>
+      <cbc:HandlingCode>01</cbc:HandlingCode>
+      <cbc:Information>VENTA DIRECTA</cbc:Information>
+      <cbc:GrossWeightMeasure unitCode="KGM">0.0</cbc:GrossWeightMeasure>
+      <cbc:SplitConsignmentIndicator>false</cbc:SplitConsignmentIndicator>
+      <cac:ShipmentStage>
+         <cbc:TransportModeCode>01</cbc:TransportModeCode>
+         <cac:TransitPeriod>
+            <cbc:StartDate>2020-01-22</cbc:StartDate>
+         </cac:TransitPeriod>
+         <cac:CarrierParty>
+            <cac:PartyIdentification>
+               <cbc:ID>20388724278</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+               <cbc:Name>SERT TRANSPORTE PERU S.A.C</cbc:Name>
+            </cac:PartyName>
+         </cac:CarrierParty>
+      </cac:ShipmentStage>
+      <cac:Delivery>
+         <cac:DeliveryAddress>
+            <cbc:ID>140130</cbc:ID>
+            <cbc:StreetName>Av. santiago de surco nro. 3573 int. 302</cbc:StreetName>
+            <cac:Country>
+               <cbc:IdentificationCode>PE</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:DeliveryAddress>
+      </cac:Delivery>
+      <cac:OriginAddress>
+         <cbc:ID>140101</cbc:ID>
+         <cbc:StreetName>Av. inca garcilaso de la vega nro. 1348 int. 1139 cercado de   (ssa-111)</cbc:StreetName>
+         <cac:Country>
+            <cbc:IdentificationCode>PE</cbc:IdentificationCode>
+         </cac:Country>
+      </cac:OriginAddress>
+   </cac:Shipment>
+   <cac:DespatchLine>
+      <cbc:ID>1</cbc:ID>
+      <cbc:DeliveredQuantity unitCode="ZZ">1.0</cbc:DeliveredQuantity>
+      <cac:OrderLineReference>
+         <cbc:LineID>1</cbc:LineID>
+      </cac:OrderLineReference>
+      <cac:Item>
+         <cbc:Name>Cable mini USB</cbc:Name>
+         <cac:SellersItemIdentification>
+            <cbc:ID>6</cbc:ID>
+         </cac:SellersItemIdentification>
+      </cac:Item>
+   </cac:DespatchLine>
+   <cac:DespatchLine>
+      <cbc:ID>2</cbc:ID>
+      <cbc:DeliveredQuantity unitCode="ZZ">1.0</cbc:DeliveredQuantity>
+      <cac:OrderLineReference>
+         <cbc:LineID>2</cbc:LineID>
+      </cac:OrderLineReference>
+      <cac:Item>
+         <cbc:Name>Adaptador De Poder Apple 60W MagSafe</cbc:Name>
+         <cac:SellersItemIdentification>
+            <cbc:ID>5</cbc:ID>
+         </cac:SellersItemIdentification>
+      </cac:Item>
+   </cac:DespatchLine>
+</DespatchAdvice>

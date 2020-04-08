@@ -1,0 +1,22 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.sunat.gob.pe" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+   <soapenv:Header>
+   <wsse:Security>
+   <wsse:UsernameToken>
+   <wsse:Username>MODDATOS</wsse:Username>
+   <wsse:Password>MODDATOS</wsse:Password>
+   </wsse:UsernameToken>
+   </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ser:getStatusCdr>
+         <!--Optional:-->
+         <rucComprobante>20604182329</rucComprobante>
+         <!--Optional:-->
+         <tipoComprobante>01</tipoComprobante>
+         <!--Optional:-->
+         <serieComprobante>F001</serieComprobante>
+         <!--Optional:-->
+         <numeroComprobante>00000003</numeroComprobante>
+      </ser:getStatusCdr>
+   </soapenv:Body>
+</soapenv:Envelope>

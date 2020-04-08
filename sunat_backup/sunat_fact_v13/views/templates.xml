@@ -1,0 +1,93 @@
+<odoo>
+    <data>
+         <template id="assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+            <script type="text/javascript" src="/sunat_fact/static/src/js/jquery.js"></script>
+            <script type="text/javascript" src="/sunat_fact/static/src/js/invoice.js"></script>   
+            <script type="text/javascript" src="/sunat_fact/static/src/js/admin.js"></script>  
+            <link rel="stylesheet" href="/sunat_fact/static/src/css/admin.css"/> 
+            </xpath>
+        </template>
+
+         <template id="assets_frontend" inherit_id="web.assets_frontend">
+            <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/sunat_fact/static/src/css/frontend.css"/> 
+            <script type="text/javascript" src="/sunat_fact/static/src/js/jquery.js"></script>
+            <script type="text/javascript" src="/sunat_fact/static/src/js/frontend.js"></script>
+            </xpath>
+        </template>
+
+        <template id="account_invoice_report_template" inherit_id="account.report_invoice_document">
+         <xpath expr="//h2" position="replace">
+
+            <div style="width:700px; height:110px;">
+                <div style="width:600px;">
+                    <h2>
+                        <span t-if="o.type == 'out_invoice' and o.state in ('open', 'in_payment', 'paid')">Invoice</span>
+                        <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
+                        <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
+                        <span t-if="o.type == 'out_refund'">Credit Note</span>
+                        <span t-if="o.type == 'in_refund'">Vendor Credit Note</span>
+                        <span t-if="o.type == 'in_invoice'">Vendor Bill</span>
+                        <span t-field="o.number"/>
+                    </h2>
+                </div>
+                <t t-if="o.qr_in_report == True">
+                    <div  style="text-align: right;margin-top: -38px;margin-right: 27px;">
+                        <span t-field="o.qr_image" t-options='{"widget": "image","class":"qr-image","style":"max-width: 100px"}' />
+                    </div>
+                </t>
+            </div>
+        </xpath>
+
+    </template>
+
+    <template id="address_b2b" inherit_id="website_sale.address">
+        <xpath expr="//label[@for='vat']" position="after">
+            <t>                  
+                <select  name="sunat_tipo_documento" id="sunat_tipo_documento" t-attf-class="form-control #{error.get('sunat_tipo_documento') and 'is-invalid' or ''}" t-att-readonly="'1' if 'vat' in checkout and checkout['vat'] and not can_edit_vat else None">
+                    <option t-att-value="1"  t-att-selected="'sunat_tipo_documento' in checkout and checkout['sunat_tipo_documento'] == '1'">DNI</option>
+                    <option t-att-value="6"  t-att-selected="'sunat_tipo_documento' in checkout and checkout['sunat_tipo_documento'] == '6'">RUC</option>
+                    <option t-att-value="7"  t-att-selected="'sunat_tipo_documento' in checkout and checkout['sunat_tipo_documento'] == '7'">Pasaporte</option>
+                    <option t-att-value="4"  t-att-selected="'sunat_tipo_documento' in checkout and checkout['sunat_tipo_documento'] == '4'">Carnet de extranjería</option>
+                </select>
+              
+            </t>
+        </xpath>
+         <xpath expr="//form[@class='checkout_autoformat']/div[@class='form-row']/div[12]" position="after">
+            <t> 
+                <div class="div_district form-group  col-lg-6">
+                    <label class="col-form-label" for="district_id">Distrícto</label>                 
+                    <select name="district_id" data-init="1" class="form-control ">
+                    </select>     
+                </div>           
+            </t>
+        </xpath>
+         <xpath expr="//form[@class='checkout_autoformat']/div[@class='form-row']/div[12]" position="after">
+            <t> 
+                <div class="form-group  col-lg-6 div_province">
+                    <label class="col-form-label" for="province_id">Provincia</label>          
+                        <select name="province_id" data-init="1" class="form-control ">
+                    </select>    
+                </div>          
+            </t>
+        </xpath> 
+         <xpath expr="//label[@for='state_id']" position="replace">
+            <t> 
+               <label class="col-form-label" for="state_id">Departamento</label>    
+            </t>
+        </xpath>      
+        <xpath expr="//label[@for='vat']" position="after">
+         <t> 
+              <input type="hidden" name="ubigeo" id="ubigeo"  t-attf-class="form-control #{error.get('ubigeo') and 'is-invalid' or ''}"/>
+              </t>
+        </xpath>
+        <xpath expr="//input[@name='field_required']" position="replace">
+            <t>
+             <input type="hidden" name="field_required" t-att-value="'phone,name,sunat_tipo_documento,zip,ubigeo'" />
+            </t>
+        </xpath>
+    </template>
+    
+    </data>
+</odoo>
