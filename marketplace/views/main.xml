@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="marketplace_main_menu" name="Marketplace" sequence="32"
+        groups="marketplace.group_user" web_icon="marketplace,static/description/icon.png"/>
+    <menuitem id="marketplace_conf_menu" name="Configuration" sequence="99"
+        parent="marketplace_main_menu"/>
+</odoo>

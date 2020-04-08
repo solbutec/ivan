@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="meli_configuration_wizard_form_view" model="ir.ui.view">
+        <field name="name">marketplace.meli.configuration.wizard.form.view</field>
+        <field name="model">marketplace.meli.configuration.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Configuration Wizard">
+                <field name="site_id" invisible="1"/>
+                <group name="main">
+                    <field name="country"/>
+                </group>
+                <group>
+                    <field name="category_ids" widget="many2many_tags"
+                        options="{'no_create': True}"/>
+                </group>
+                <footer>
+                    <button special="cancel" string="Cancel" class="btn-default"/>
+                    <button name="get_parent_categories" type="object" string="Read categories" icon="fa-cloud" class="btn-primary"/>
+                    <button name="get_data" type="object" string="Configurate data" icon="fa-cogs" class="btn-primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <act_window id="meli_configuration_wizard_action"
+        name="Configuration Wizard"
+        res_model="marketplace.meli.configuration.wizard"
+        view_mode="form"
+        view_type="form"
+        target="new"/>
+    <!-- Adding button to marketplace.site view -->
+    <record id="marketplace_site_configuration_form_view_inherit" model="ir.ui.view">
+        <field name="name">marketplace.site.configuration.form.view</field>
+        <field name="model">marketplace.site</field>
+        <field name="inherit_id" ref="marketplace_site_form_view_inherit"/>
+        <field name="arch" type="xml">
+            <button name="meli_authenticate" position="before">
+                <button name="%(meli_configuration_wizard_action)d" type="action" class="oe_stat_button" icon="fa-cogs" string="Configurate"
+                    attrs="{'invisible': ['|', ('provider', '!=', 'meli'), ('meli_auth_token', '=', False)]}"
+                    context="{'default_site_id': id}"
+                    help="Configurate MercadoLibre data, you should do this only once."/>
+            </button>
+        </field>
+    </record>
+</odoo>

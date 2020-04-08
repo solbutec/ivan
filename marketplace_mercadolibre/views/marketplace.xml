@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="marketplace_site_form_view_inherit" model="ir.ui.view">
+        <field name="name">marketplace.site.form.view</field>
+        <field name="model">marketplace.site</field>
+        <field name="inherit_id" ref="marketplace.marketplace_site_form_view"/>
+        <field name="arch" type="xml">
+            <button name="publish" position="before">
+                <button name="meli_authenticate" type="object" class="oe_stat_button" icon="fa-sign-in" string="Authenticate"
+                    attrs="{'invisible': ['|', ('provider', '!=', 'meli'), ('meli_auth_token', '!=', False)]}"
+                    help="Authenticate on MercadoLibre, you should do this only once."/>
+            </button>
+            <page name="credentials" position="inside">
+                <group name="meli_credentials" attrs="{'invisible': [('provider', '!=', 'meli')]}">
+                    <p colspan="2">To get your access token, go to <a href="http://applications.mercadolibre.com/" target="_blank">MercadoLibre</a>, select your country and create an application.</p>
+                    <field name="meli_app_id" attrs="{'required': [('provider', '=', 'meli')]}"/>
+                    <field name="meli_secret_key" password="True" attrs="{'required': [('provider', '=', 'meli')]}"/>
+                    <p colspan="2">If requests are failing, delete the access token and click on Authenticate.</p>
+                    <field name="meli_auth_token"/>
+                    <field name="meli_refresh_token" readonly="1"/>
+                    <field name="meli_expires_in" readonly="1"/>
+                </group>
+            </page>
+        </field>
+    </record>
+
+    <record id="marketplace_product_form_view_inherit" model="ir.ui.view">
+        <field name="name">marketplace.meli.product.form.view</field>
+        <field name="model">marketplace.product</field>
+        <field name="inherit_id" ref="marketplace.marketplace_product_form_view"/>
+        <field name="arch" type="xml">
+            <group name="right" position="inside">
+                <field name="meli_listing_type_id" options="{'no_create': True, 'no_open': True}"
+                    attrs="{'invisible': [('provider', '!=', 'meli')], 'required': [('provider', '=', 'meli')], 'readonly': [('published', '=', True)]}"/>
+                <field name="meli_category_id" options="{'no_create': True, 'no_open': True}" domain="[('child_ids', '=', False)]"
+                    attrs="{'invisible': [('provider', '!=', 'meli')], 'required': [('provider', '=', 'meli')]}"/>
+            </group>
+        </field>
+    </record>
+
+    <record id="marketplace_product_sheet_view_inherit" model="ir.ui.view">
+        <field name="name">marketplace.meli.product.sheet.view</field>
+        <field name="model">marketplace.product</field>
+        <field name="inherit_id" ref="marketplace.marketplace_product_sheet_view"/>
+        <field name="arch" type="xml">
+            <group name="right" position="inside">
+                <field name="meli_listing_type_id" options="{'no_create': True, 'no_open': True}"
+                    attrs="{'invisible': [('provider', '!=', 'meli')], 'required': [('provider', '=', 'meli')], 'readonly': [('published', '=', True)]}"/>
+                <field name="meli_category_id" options="{'no_create': True, 'no_open': True}" domain="[('child_ids', '=', False)]"
+                    attrs="{'invisible': [('provider', '!=', 'meli')], 'required': [('provider', '=', 'meli')]}"/>
+            </group>
+        </field>
+    </record>
+</odoo>

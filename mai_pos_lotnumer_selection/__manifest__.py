@@ -1,0 +1,25 @@
+{
+    'name': 'POS Lot/Serial Numbers(Community & Enterprise)',
+    'version': '12.0.2',
+    'category': 'Point of Sale',
+    'summary': 'Using this module you can Search product using Lot/Serial number in Point of sale',
+    'description': """ Using this module you can Search product using Lot/Serial number in Point of sale .
+    """,
+    'price': 10,
+    'currency': 'EUR',
+    "author" : "MAISOLUTIONSLLC",
+    "email": 'help@maisolutionsllc.com',
+    "website":'http://maisolutionsllc.com/',
+    'license': 'OPL-1',
+    'depends': ['point_of_sale'],
+    # "live_test_url" : "",
+    'data': [
+        'views/point_of_sale.xml',
+    ],
+    'qweb': ['static/src/xml/point_of_sale.xml'],
+    'images': ['static/description/main_screenshot.png'],
+    'demo': [],
+    'test': [],
+    'installable': True,
+    'auto_install': False,
+}

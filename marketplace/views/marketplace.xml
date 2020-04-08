@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- marketplace.product form view with sheet -->
+    <record id="marketplace_product_sheet_view" model="ir.ui.view">
+        <field name="name">marketplace.product.sheet.view</field>
+        <field name="model">marketplace.product</field>
+        <field name="priority" eval="4"/>
+        <field name="arch" type="xml">
+            <form string="Marketplace Products">
+                <field name="published" invisible="1"/>
+                <field name="provider" invisible="1"/>
+                <sheet>
+                    <div class="oe_button_box pull-right" name="button_box">
+                        <button name="publish" type="object" string="Publish" class="oe_stat_button"
+                            icon="fa-globe" attrs="{'invisible': [('published', '=', True)]}"/>
+                        <button name="withdraw" type="object" string="Withdraw" class="oe_stat_button"
+                            icon="fa-sign-out" attrs="{'invisible': [('published', '=', False)]}"/>
+                        <button name="update_stock" type="object" string="Update Stock" class="oe_stat_button"
+                            icon="fa-pencil-square-o" attrs="{'invisible': [('published', '=', False)]}"/>
+                    </div>
+                    <group name="main">
+                        <group name="left">
+                            <field name="product_id" attrs="{'readonly': [('published', '=', True)]}"
+                                invisible="context.get('marketplace_hide_product')"
+                                options="{'no_create': True, 'no_open': True}"/>
+                            <field name="site_id" attrs="{'readonly': [('published', '=', True)]}"
+                                invisible="context.get('marketplace_hide_site')"
+                                options="{'no_create': True, 'no_open': True}"/>
+                            <field name="reference" readonly="1"/>
+                            <field name="product_name"/>
+                            <field name="alternative_name" attrs="{'invisible': [('product_name', '!=', 'alt')], 'required': [('product_name', '=', 'alt')]}"/>
+                        </group>
+                        <group name="right"/>
+                    </group>
+                    <group name="extra">
+                        <field name="publishment_url" widget="url" readonly="1"
+                            attrs="{'invisible': [('published', '=', False)]}"/>
+                        <field name="attachment_ids" widget="many2many_binary"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- marketplace.product form view for m2m -->
+    <record id="marketplace_product_form_view" model="ir.ui.view">
+        <field name="name">marketplace.product.form.view</field>
+        <field name="model">marketplace.product</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <form string="Marketplace Products">
+                <field name="published" invisible="1"/>
+                <field name="provider" invisible="1"/>
+                <header>
+                    <button name="publish" type="object" string="Publish" class="btn-primary"
+                        attrs="{'invisible': [('published', '=', True)]}"/>
+                    <button name="withdraw" type="object" string="Withdraw" class="btn-primary"
+                        attrs="{'invisible': [('published', '=', False)]}"/>
+                    <button name="update_stock" type="object" string="Update Stock" class="btn-primary"
+                        attrs="{'invisible': [('published', '=', False)]}"/>
+                </header>
+                <group name="main">
+                    <group name="left">
+                        <field name="product_id" attrs="{'readonly': [('published', '=', True)]}"
+                            invisible="context.get('marketplace_hide_product')"
+                            options="{'no_create': True, 'no_open': True}"/>
+                        <field name="site_id" attrs="{'readonly': [('published', '=', True)]}"
+                            invisible="context.get('marketplace_hide_site')"
+                            options="{'no_create': True, 'no_open': True}"/>
+                        <field name="reference" readonly="1"/>
+                        <field name="product_name"/>
+                        <field name="alternative_name" attrs="{'invisible': [('product_name', '!=', 'alt')], 'required': [('product_name', '=', 'alt')]}"/>
+                    </group>
+                    <group name="right"/>
+                </group>
+                <group name="extra">
+                    <field name="publishment_url" widget="url" readonly="1"
+                        attrs="{'invisible': [('published', '=', False)]}"/>
+                    <field name="attachment_ids" widget="many2many_binary"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <!-- marketplace.product tree view -->
+    <record id="marketplace_product_tree_view" model="ir.ui.view">
+        <field name="name">marketplace.product.tree.view</field>
+        <field name="model">marketplace.product</field>
+        <field name="arch" type="xml">
+            <tree decoration-success="published">
+                <field name="published" invisible="1"/>
+                <field name="site_id" invisible="context.get('marketplace_hide_site')"/>
+                <field name="provider" invisible="1"/>
+                <field name="product_id" invisible="context.get('marketplace_hide_product')"/>
+                <field name="reference"/>
+                <field name="stock"/>
+                <field name="price"/>
+                <field name="publishment_url" widget="url"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Marketplace site views -->
+    <record id="marketplace_site_form_view" model="ir.ui.view">
+        <field name="name">marketplace.site.form.view</field>
+        <field name="model">marketplace.site</field>
+        <field name="arch" type="xml">
+            <form string="Marketplace">
+                <sheet>
+                    <div class="oe_button_box pull-right" name="button_box">
+                        <button name="publish" type="object" class="oe_stat_button" icon="fa-globe" string="Publish All"
+                            help="Publishes all products on the marketplace site."/>
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options="{'terminology': 'archive'}"/>
+                        </button>
+                    </div>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group name="main">
+                        <group name="left">
+                            <field name="provider"/>
+                            <field name="pricelist_id" options="{'no_create': 1}" groups="product.group_sale_pricelist"/>
+                            <field name="fee_type"/>
+                            <field name="fee_amount" attrs="{'invisible': [('fee_type', '=', False)]}"/>
+                        </group>
+                        <group name="right">
+                            <field name="publishment_rule" widget="radio"/>
+                            <field name="minimun_stock_rule"
+                                attrs="{'invisible': [('publishment_rule', '!=', 'stock')], 'required': [('publishment_rule', '=', 'stock')]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="credentials" string="Credentials"/>
+                        <page name="products" string="Products">
+                            <field name="marketplace_product_ids"
+                                context="{'default_site_id': id, 'marketplace_hide_site': True, 'form_view_ref': 'marketplace.marketplace_product_form_view'}"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="marketplace_site_tree_view" model="ir.ui.view">
+        <field name="name">marketplace.site.tree.view</field>
+        <field name="model">marketplace.site</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="environment"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="marketplace_site_kanban_view" model="ir.ui.view">
+        <field name="name">marketplace.site.kanban.view</field>
+        <field name="model">marketplace.site</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="id"/>
+                <field name="image"/>
+                <field name="name"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_image">
+                                <img t-att-src="kanban_image('marketplace.site', 'image', record.id.raw_value)" alt="Site"/>
+                            </div>
+                            <div class="oe_kanban_details" t-att-title="record.name.value">
+                                <strong class="o_kanban_record_title">
+                                    <field name="name"/>
+                                </strong>
+                                <field name="environment" widget="kanban_label_selection" options="{'classes': {'test': 'warning', 'prod': 'success'}}"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="marketplace_site_action" model="ir.actions.act_window">
+        <field name="name">Marketplaces</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">marketplace.site</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_type">form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new Marketplace
+            </p>
+            <p>
+                Marketplaces lets you manage your products publishment, so you won't need to upload them manually.
+            </p>
+        </field>
+    </record>
+    <menuitem id="marketplace_site_menu" name="Marketplaces" parent="marketplace_conf_menu" action="marketplace_site_action" sequence="16"/>
+</odoo>

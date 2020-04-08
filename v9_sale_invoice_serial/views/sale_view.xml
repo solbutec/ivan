@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+        <record id="view_order_form_inherit_bi" model="ir.ui.view">
+            <field name="name">view.order.form.inherit.bi</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//page/field[@name='order_line']/tree/field[@name='name']" position="after">
+                    <field name="serial_no" widget="many2many_tags"  />
+                </xpath>
+                <xpath expr="//button[@name='action_confirm']" position="before">
+                        <button name="%(action_view_sale_barcode)d" string="Scan"
+                        type="action" states="draft" class="oe_highlight" />
+                </xpath>
+            </field>
+        </record>
+
+	</data>
+</odoo>

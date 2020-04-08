@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+    <!-- Category -->
+    <record id="group_category" model="ir.module.category">
+        <field name="name">Marketplace</field>
+        <field name="description">User access level for Marketplaces</field>
+        <field name="sequence">15</field>
+    </record>
+    <!-- Client -->
+    <record id="group_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="marketplace.group_category"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <!-- Manager -->
+    <record id="group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="marketplace.group_category"/>
+        <field name="implied_ids" eval="[(4, ref('marketplace.group_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+    </record>
+</odoo>

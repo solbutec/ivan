@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_invoice_line_tax" model="ir.ui.view">
+            <field name="name">account.invoice.line.tax.form.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//page/field[@name='invoice_line_ids']/tree/field[@name='name']" position="after">
+                    <field name="serial_no"  widget="many2many_tags"  />
+                </xpath>
+                <xpath expr="//button[@name='action_invoice_sent']" position="after">
+                    <button name="%(action_view_invoice_barcode)d" string="Scan"
+                        type="action" states="draft" class="oe_highlight" />
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

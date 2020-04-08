@@ -1,0 +1,444 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* marketplace_mercadolibre
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-03 23:24+0000\n"
+"PO-Revision-Date: 2019-10-03 19:31-0400\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_CL\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: marketplace_mercadolibre
+#: model_terms:ir.ui.view,arch_db:marketplace_mercadolibre.marketplace_site_form_view_inherit
+msgid ", select your country and create an application."
+msgstr ", escoja su país y cree una aplicación."
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_site__meli_auth_token
+msgid "Access Token"
+msgstr "Token de acceso"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_category__active
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_listing_type__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_site__meli_app_id
+msgid "App ID"
+msgstr "ID Aplicación"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "Argentina"
+msgstr "Argentina"
+
+#. module: marketplace_mercadolibre
+#: model_terms:ir.ui.view,arch_db:marketplace_mercadolibre.marketplace_site_form_view_inherit
+msgid "Authenticate"
+msgstr "Autenticar"
+
+#. module: marketplace_mercadolibre
+#: model_terms:ir.ui.view,arch_db:marketplace_mercadolibre.marketplace_site_form_view_inherit
+msgid "Authenticate on MercadoLibre, you should do this only once."
+msgstr "Autenticar en MercadoLibre, debe hacer esto sólo una vez."
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "Brasil"
+msgstr "Brasil"
+
+#. module: marketplace_mercadolibre
+#: model_terms:ir.ui.view,arch_db:marketplace_mercadolibre.meli_configuration_wizard_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_wizard__category_ids
+#: model:ir.ui.menu,name:marketplace_mercadolibre.meli_category_menu
+msgid "Categories"
+msgstr "Categorías"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_product__meli_category_id
+msgid "Category"
+msgstr "Categoría"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_categories__child_ids
+msgid "Child"
+msgstr "Hijos"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_category__child_ids
+msgid "Children Categories"
+msgstr "Categorías hijas"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "Chile"
+msgstr "Chile"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_category__code
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_categories__code
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_country__code
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_listing_type__code
+msgid "Code"
+msgstr "Código"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "Colombia"
+msgstr "Colombia"
+
+#. module: marketplace_mercadolibre
+#: model_terms:ir.ui.view,arch_db:marketplace_mercadolibre.marketplace_site_configuration_form_view_inherit
+msgid "Configurate"
+msgstr "Configurar"
+
+#. module: marketplace_mercadolibre
+#: model_terms:ir.ui.view,arch_db:marketplace_mercadolibre.marketplace_site_configuration_form_view_inherit
+msgid "Configurate MercadoLibre data, you should do this only once."
+msgstr "Configurar datos de MercadoLibre, debe hacer esto solo una vez."
+
+#. module: marketplace_mercadolibre
+#: model_terms:ir.ui.view,arch_db:marketplace_mercadolibre.meli_configuration_wizard_form_view
+msgid "Configurate data"
+msgstr "Configurar data"
+
+#. module: marketplace_mercadolibre
+#: model:ir.actions.act_window,name:marketplace_mercadolibre.meli_configuration_wizard_action
+#: model_terms:ir.ui.view,arch_db:marketplace_mercadolibre.meli_configuration_wizard_form_view
+msgid "Configuration Wizard"
+msgstr "Asistente de configuración"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_wizard__country
+msgid "Country"
+msgstr "País"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model,name:marketplace_mercadolibre.model_marketplace_meli_country
+msgid "Country where MercadoLibre works."
+msgstr "País donde funciona MercadoLibre"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_category__create_uid
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_categories__create_uid
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_wizard__create_uid
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_country__create_uid
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_listing_type__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_category__create_date
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_categories__create_date
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_wizard__create_date
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_country__create_date
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_listing_type__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model,name:marketplace_mercadolibre.model_marketplace_product
+msgid "Details of product in a Marketplace"
+msgstr "Detalles de producto en un Marketplace"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_category__display_name
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_categories__display_name
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_wizard__display_name
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_country__display_name
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_listing_type__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "Ecuador"
+msgstr "Ecuador"
+
+#. module: marketplace_mercadolibre
+#: code:addons/marketplace_mercadolibre/models/marketplace.py:126
+#, python-format
+msgid ""
+"Error publishing %s:\n"
+"%s"
+msgstr ""
+"Error publicando %s:\n"
+"%s"
+
+#. module: marketplace_mercadolibre
+#: code:addons/marketplace_mercadolibre/models/marketplace.py:161
+#, python-format
+msgid ""
+"Error updating %s:\n"
+"%s"
+msgstr ""
+"Error actualizando %s:\n"
+"%s"
+
+#. module: marketplace_mercadolibre
+#: code:addons/marketplace_mercadolibre/models/marketplace.py:171
+#, python-format
+msgid ""
+"Error updating description for %s:\n"
+"%s"
+msgstr ""
+"Error actualizando descripción para %s:\n"
+"%s"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_category__id
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_categories__id
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_wizard__id
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_country__id
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_listing_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: marketplace_mercadolibre
+#: model_terms:ir.ui.view,arch_db:marketplace_mercadolibre.marketplace_site_form_view_inherit
+msgid "If requests are failing, delete the access token and click on Authenticate."
+msgstr "Si las solicitudes fallan, borrar el token de acceso y hacer click en Autenticar."
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_category____last_update
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_categories____last_update
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_wizard____last_update
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_country____last_update
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_listing_type____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_category__write_uid
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_categories__write_uid
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_wizard__write_uid
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_country__write_uid
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_listing_type__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_category__write_date
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_categories__write_date
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_wizard__write_date
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_country__write_date
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_listing_type__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_product__meli_listing_type_id
+msgid "Listing type"
+msgstr "Tipo de publicación"
+
+#. module: marketplace_mercadolibre
+#: model:ir.actions.act_window,name:marketplace_mercadolibre.meli_category_action
+#: model:ir.actions.act_window,name:marketplace_mercadolibre.meli_listing_type_action
+#: model:ir.ui.menu,name:marketplace_mercadolibre.meli_listing_menu
+msgid "Listing types"
+msgstr "Tipos de publicación"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.site,provider:0
+msgid "Manual configuration"
+msgstr "Configuración manual"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model,name:marketplace_mercadolibre.model_marketplace_site
+msgid "Marketplace site"
+msgstr "Sitio de Marketplace"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_site__meli_country
+msgid "Meli Country"
+msgstr "País Meli"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_site__meli_currency_id
+msgid "Meli Currency"
+msgstr "Moneda Meli"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.site,provider:0
+msgid "Mercado Libre"
+msgstr "Mercado Libre"
+
+#. module: marketplace_mercadolibre
+#: model:ir.ui.menu,name:marketplace_mercadolibre.meli_menu
+#: model_terms:ir.ui.view,arch_db:marketplace_mercadolibre.marketplace_site_form_view_inherit
+msgid "MercadoLibre"
+msgstr "MercadoLibre"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model,name:marketplace_mercadolibre.model_marketplace_meli_listing_type
+msgid "MercadoLibre Listing Types"
+msgstr "Tipos de publicaciones de MercadoLibre"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model,name:marketplace_mercadolibre.model_marketplace_meli_category
+msgid "MercadoLibre categories"
+msgstr "Categorías de MercadoLibre"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model,name:marketplace_mercadolibre.model_marketplace_meli_configuration_wizard
+msgid "MercadoLibre configuration wizard"
+msgstr "Asistente de configuración de Mercado Libe"
+
+#. module: marketplace_mercadolibre
+#: model:ir.actions.server,name:marketplace_mercadolibre.meli_update_stock_cron_ir_actions_server
+#: model:ir.cron,cron_name:marketplace_mercadolibre.meli_update_stock_cron
+#: model:ir.cron,name:marketplace_mercadolibre.meli_update_stock_cron
+msgid "MercadoLibre update stock scheduler"
+msgstr "Planificación de actualización de stock en MercadoLibre"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "México"
+msgstr "México"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_category__name
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_categories__name
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_country__name
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_listing_type__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "Panamá"
+msgstr "Panamá"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_categories__parent_id
+msgid "Parent"
+msgstr "Padre"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_category__parent_id
+msgid "Parent Category"
+msgstr "Categoría padre"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model,name:marketplace_mercadolibre.model_marketplace_meli_configuration_categories
+msgid "Parent categories for MercadoLibre configuration"
+msgstr "Categorías padres para configuración de MercadoLibre"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "Perú"
+msgstr "Perú"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "Portugal"
+msgstr "Portugal"
+
+#. module: marketplace_mercadolibre
+#: code:addons/marketplace_mercadolibre/controllers/main.py:94
+#, python-format
+msgid "Presupuesto creado desde Mercado Libre"
+msgstr "Presupuesto creado desde Mercado Libre"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_site__provider
+msgid "Provider"
+msgstr "Proveedor"
+
+#. module: marketplace_mercadolibre
+#: model:ir.actions.act_window,name:marketplace_mercadolibre.meli_publishments_action
+#: model:ir.ui.menu,name:marketplace_mercadolibre.meli_publishments_menu
+msgid "Publishments"
+msgstr "Publicaciones"
+
+#. module: marketplace_mercadolibre
+#: model_terms:ir.ui.view,arch_db:marketplace_mercadolibre.meli_configuration_wizard_form_view
+msgid "Read categories"
+msgstr "Leer categorías"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_sale_order__ref_mercadolibre
+msgid "Referencia ML"
+msgstr "Referencia ML"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_site__meli_refresh_token
+msgid "Refresh Token"
+msgstr "Token de refrescado"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "República Dominicana"
+msgstr "República Dominicana"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model,name:marketplace_mercadolibre.model_sale_order
+msgid "Sale Order"
+msgstr "Pedido de venta"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_site__meli_secret_key
+msgid "Secret Key"
+msgstr "Llave secreta"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_meli_configuration_wizard__site_id
+msgid "Site"
+msgstr "Sitio"
+
+#. module: marketplace_mercadolibre
+#: model_terms:ir.ui.view,arch_db:marketplace_mercadolibre.marketplace_site_form_view_inherit
+msgid "To get your access token, go to"
+msgstr "Para obtener su token de acceso, vaya a"
+
+#. module: marketplace_mercadolibre
+#: model:ir.model.fields,field_description:marketplace_mercadolibre.field_marketplace_site__meli_expires_in
+msgid "Token Expire time"
+msgstr "Tiempo de expiración del token"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "Uruguay"
+msgstr "Uruguay"
+
+#. module: marketplace_mercadolibre
+#: selection:marketplace.meli.configuration.wizard,country:0
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#. module: marketplace_mercadolibre
+#: sql_constraint:sale.order:0
+msgid "Ya fue capturada la orden."
+msgstr "Ya fue capturada la orden."
+
+#. module: marketplace_mercadolibre
+#: code:addons/marketplace_mercadolibre/models/marketplace.py:96
+#, python-format
+msgid "You can not publish products until you configure access token for MercadoLibre."
+msgstr "No puedes publicar productos hasta que configures el token de acceso para MercadoLibre."
+
+#. module: marketplace_mercadolibre
+#: code:addons/marketplace_mercadolibre/models/marketplace.py:135
+#, python-format
+msgid "You can not update products until you configure access token for MercadoLibre."
+msgstr "No puedes publicar productos hasta que configures el token de acceso para MercadoLibre."

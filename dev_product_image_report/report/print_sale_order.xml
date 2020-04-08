@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    <template id="report_saleorder_image_inherit" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//table[hasclass('table','table-sm')]/thead/tr/th" position="before">
+            <th>No</th>
+            <th>Image</th>
+        </xpath>
+        <xpath expr="//table[hasclass('table','table-sm')]/tbody/t/tr/t/td" position="before">
+            <td>
+               <span t-esc="line_index+1"/>
+            </td>
+            <td>
+                <img t-if="line.product_id.image_medium" t-att-src="'data:image/png;base64,%s' % to_text(line.product_id.image_medium)" style="height: 40px;width:50px;"/>
+                
+            </td>
+        </xpath>
+    </template>
+    
+    
+     <template id="quotation_report_image_document_inherit" inherit_id="purchase.report_purchasequotation_document">
+        <xpath expr="//table[hasclass('table','table-sm')]/thead/tr/th[1]" position="before">
+            <th>No</th>
+            <th>Image</th>
+        </xpath>
+		<xpath expr="//table[hasclass('table','table-sm')]/tbody/tr/td[1]" position="before">
+            <td>
+               <span t-esc="order_line_index+1"/>
+            </td>
+            <td>
+                <img t-if="order_line.product_id.image_medium" t-att-src="'data:image/png;base64,%s' % to_text(order_line.product_id.image_medium)" style="height: 40px;width:50px;"/>
+            </td>
+        </xpath>
+	</template>
+
+    <template id="oder_report_image_document_inherit" inherit_id="purchase.report_purchaseorder_document">
+        <xpath expr="//table[hasclass('table','table-sm')]/thead/tr/th" position="before">
+            <th>No</th>
+            <th>Image</th>
+        </xpath>
+		<xpath expr="//table[hasclass('table','table-sm')]/tbody/tr/td" position="before">
+            <td>
+               <span t-esc="line_index+1"/>
+            </td>
+            <td>
+                <img t-if="line.product_id.image_medium" t-att-src="'data:image/png;base64,%s' % to_text(line.product_id.image_medium)" style="height: 40px;width:50px;"/>
+
+            </td>
+        </xpath>
+	</template>
+
+	<template id="report_image_acciunt_inherit" inherit_id="account.report_invoice_document">
+        <xpath expr="//table[@name='invoice_line_table']/thead/tr/th" position="before">
+            <th>No</th>
+            <th>Image</th>
+        </xpath>
+		<xpath expr="//table[@name='invoice_line_table']/tbody/t/tr/t/td" position="before">
+           <td>
+               <span t-esc="line_index+1"/>
+            </td>
+            <td>
+                <img t-if="line.product_id.image_medium" t-att-src="'data:image/png;base64,%s' % to_text(line.product_id.image_medium)" style="height: 40px;width:50px;"/>
+            </td>
+        </xpath>
+	</template>
+    
+</data>
+</openerp>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_marketplace_meli_listing_type,access_marketplace_meli_listing_type,model_marketplace_meli_listing_type,marketplace.group_user,1,1,1,1
+access_marketplace_meli_category,access_marketplace_meli_category,model_marketplace_meli_category,marketplace.group_user,1,1,1,1
+access_marketplace_meli_country,access_marketplace_meli_country,model_marketplace_meli_country,marketplace.group_user,1,1,1,1

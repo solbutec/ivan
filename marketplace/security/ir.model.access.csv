@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_general_marketplace_product,access_marketplace_product,model_marketplace_product,,1,0,0,0
+access_marketplace_product,access_marketplace_product,model_marketplace_product,marketplace.group_user,1,1,1,1
+access_user_marketplace_site,access_user_marketplace_site,model_marketplace_site,marketplace.group_user,1,1,0,0
+access_manager_marketplace_site,access_manager_marketplace_site,model_marketplace_site,marketplace.group_manager,1,1,1,1
+

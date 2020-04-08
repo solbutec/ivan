@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="mercadolibre_marketplace_site" model="marketplace.site">
+        <field name="name">Mercado Libre</field>
+        <field name="image" type="base64" file="marketplace_mercadolibre/static/description/icon.png"/>
+        <field name="provider">meli</field>
+        <field name="environment">test</field>
+    </record>
+</odoo>

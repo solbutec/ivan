@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="meli_update_stock_cron" model="ir.cron">
+        <field name="name">MercadoLibre update stock scheduler</field>
+        <field name="active" eval="True"/>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_type">minutes</field>
+        <field name="interval_number">5</field>
+        <field name="numbercall">-1</field>
+        <field name="state">code</field>
+        <field name="model_id" ref="marketplace.model_marketplace_site"/>
+        <field name="code">model.meli_cron_update_all()</field>
+    </record>
+</odoo>

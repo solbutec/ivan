@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets" inherit_id="point_of_sale.assets">
+          <xpath expr="." position="inside">
+              <script type="text/javascript" src="/mai_pos_lotnumer_selection/static/src/js/pos.js"></script>
+          </xpath>
+        </template>
+
+        <record id="sun_pos_config_view_form" model="ir.ui.view">
+            <field name="name">pos.config.form.view</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='inventory_location']" position="after">
+                    <center><h1><ul>Lot/Serial Number Configuration</ul></h1></center>
+                    <div class="row mt16 o_settings_container" id="pos_login_screen">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="allow_pos_lot"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="enable_lot" string="Lot/Serial Number Config"/>
+                                <div class="text-muted">
+                                    Lot/Serial Number Configuration
+                                </div>
+                                <div class="content-group" attrs="{'invisible' : [('allow_pos_lot', '=', False)]}">
+                                    <div class="row mt16">
+                                        <label  for="lot_expire_days" class="col-md-3 o_light_label"/>
+                                        <field name="lot_expire_days"/>
+                                    </div>
+                                    <div class="row">
+                                        <label for="pos_lot_receipt" class="col-md-3 o_light_label"/>
+                                        <field name="pos_lot_receipt"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
